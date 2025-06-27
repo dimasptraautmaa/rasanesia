@@ -1,0 +1,159 @@
+section {
+    width: 70%;
+    max-width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: auto;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.content-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    height:max-content;
+    z-index: 2;
+}
+
+.title {
+    font-family: var(--inter);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--brown);
+}
+
+.desc {
+    font-family: var(--outfit);
+    color: var(--brown);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.subdesc {
+    font-family: var(--outfit);
+    font-size: 0.9rem;
+    color: var(--brown);
+    margin-top: 15px;
+}
+
+.poster-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2;
+}
+
+.poster-row {
+    display: flex;
+    gap: 10px;
+}
+
+.poster {
+    width: 170px;
+    height: 240px;
+    background-color: var(--green);
+    position: relative;
+    border-radius: 10px;
+}
+
+.poster img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.leaf {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 400px;
+}
+
+nav {
+    width: 100%;
+    height: 45px;
+    background-color: var(--green);
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 5px;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+}
+
+li {
+    font-size: 1rem;
+    font-family: var(--outfit);
+    padding: 5px 15px;
+    /* background-color: var(--mustard); */
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brown);
+}
+
+li:nth-child(2) {
+    background-color: var(--mustard);
+}
+
+.nav-logo {
+    color: var(--brown);
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+@media (max-width: 500px) {
+    nav { padding: 0px 15px; }
+    ul { gap: 0px; }
+} 
+
+@media (max-width: 700px) {
+    section {
+        width: 100%;
+    }
+
+    .poster { 
+        width: 140px; 
+        height: 200px; 
+    }
+
+    .leaf {
+        width: 300px;
+    }
+
+    .title { font-size: 2rem; }
+    .desc { font-size: 1.1rem; }
+    .subdesc { font-size: 0.8rem; }
+}
+
+@media (max-width: 540px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 5px;
+    }
+    .poster { 
+        width: 170px; 
+        height: 240px; 
+    }
+    .leaf {
+        display: none;
+    }
+}
